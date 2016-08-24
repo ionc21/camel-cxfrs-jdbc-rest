@@ -1,4 +1,4 @@
-package cc.notsoclever.examples;
+package com.rest.service;
 /**
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements. See the NOTICE file

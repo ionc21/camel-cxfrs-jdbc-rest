@@ -6,3 +6,8 @@ target
 *.jar
 *.war
 *.ear
+.project
+.settings
+/target
+.classpath
+derby.log
