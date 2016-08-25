@@ -48,12 +48,6 @@ public class FulfillmentCenterOneProcessor {
 	}
 
 	protected String processCreateOrderRequestMessage(com.rest.generated.Order orderFromXml) throws Exception {
-		// 1 - Unmarshall the Order from an XML string to the generated order
-		// class.
-		// JAXBContext context = JAXBContext.newInstance(com.rest.generated.Order.class);
-		// Unmarshaller unmarshaller = context.createUnmarshaller();
-		// com.rest.generated.Order order = (com.rest.generated.Order) unmarshaller.unmarshal(new StringReader(orderXml));
-
 		// 2 - Build an Order Request object and return the JSON-ified object
 		return new Gson().toJson(buildOrderRequestType(orderFromXml));
 	}

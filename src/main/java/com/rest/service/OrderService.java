@@ -6,7 +6,6 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import com.rest.domain.FulfillmentResponse;
 import com.rest.domain.OrderRequest;
 import com.rest.generated.Order;
 
@@ -32,26 +31,18 @@ public class OrderService {
 	@Path("/processOrders")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	public FulfillmentResponse processOrders(OrderRequest orderRequest) {
+	public String processOrders(OrderRequest orderRequest) {
 		System.err.println(orderRequest);
-		FulfillmentResponse response = new FulfillmentResponse(200, "Success!");
-		return response;
+		return "SUCCESS";
 	}
 
 	@POST
 	@Path("/processXmlOrders")
 	@Consumes(MediaType.APPLICATION_XML)
 	@Produces(MediaType.APPLICATION_JSON)
-	public FulfillmentResponse processXmlOrders(Order order) {
+	public String processXmlOrders(Order order) {
 		System.err.println(order);
-		FulfillmentResponse response = new FulfillmentResponse(200, "Success!");
-		return response;
+		return "SUCCESS";
 	}
 
-	@POST
-	@Consumes(MediaType.APPLICATION_JSON)
-	@Produces(MediaType.APPLICATION_JSON)
-	public void ping(Order order) {
-		System.out.println(order);
-	}
 }
