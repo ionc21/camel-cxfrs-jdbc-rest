@@ -58,6 +58,19 @@
             <artifactId>camel-jackson</artifactId>
             <version>${camel-version}</version>
         </dependency>
+        
+        <dependency>
+		    <groupId>org.apache.camel</groupId>
+		    <artifactId>camel-xmljson</artifactId>
+		    <version>${camel-version}</version>
+		</dependency>
+		
+		<dependency>
+		  <groupId>xom</groupId>
+		  <artifactId>xom</artifactId>
+		  <version>1.2.5</version>
+		</dependency>
+        
 
         <dependency>
             <groupId>org.apache.cxf</groupId>
@@ -119,6 +132,11 @@
         	<artifactId>camel-spring-javaconfig</artifactId>
         	<version>${camel-version}</version>
         </dependency>
+        <!-- <dependency>
+        	<groupId>org.apache.camel</groupId>
+        	<artifactId>camel-jaxb</artifactId>
+        	<version>${camel-version}</version>
+        </dependency> -->
     </dependencies>
 
     <build>
