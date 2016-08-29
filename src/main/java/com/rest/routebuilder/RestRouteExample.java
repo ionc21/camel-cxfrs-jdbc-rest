@@ -31,7 +31,7 @@ public class RestRouteExample extends RouteBuilder {
 
 	@Override
 	public void configure() throws Exception {
-		from("cxfrs://http://localhost:9090?resourceClasses=com.rest.service.OrderService&bindingStyle=SimpleConsumer").log("BEFORE (XML) = ${body}")
+		from("cxfrs://http://localhost:9090?resourceClasses=com.rest.service.OrderService&bindingStyle=Default").log("BEFORE (XML) = ${body}")
 				.marshal("xmlToJson").log("BEFORE (JSON) = ${body}");
 	}
 }
