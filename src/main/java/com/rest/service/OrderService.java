@@ -7,7 +7,6 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import com.rest.domain.OrderRequest;
-import com.rest.generated.Order;
 
 /**
  * Main resource service provider for orders. Services are available through the
@@ -40,7 +39,7 @@ public class OrderService {
 	@Path("/processXmlOrders")
 	@Consumes(MediaType.APPLICATION_XML)
 	@Produces(MediaType.APPLICATION_JSON)
-	public String processXmlOrders(Order order) {
+	public String processXmlOrders(String order) {
 		System.err.println(order);
 		return "SUCCESS";
 	}

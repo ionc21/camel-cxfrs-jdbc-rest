@@ -25,17 +25,13 @@ public class RestRouteExample extends RouteBuilder {
 		xmlJsonDataFormat.setRemoveNamespacePrefixes(true);
 		xmlJsonDataFormat.setExpandableProperties(Arrays.asList("d", "u"));
 		xmlJsonDataFormat.setNamespaceMappings(namespaces);
+
 		return xmlJsonDataFormat;
 	}
 
 	@Override
 	public void configure() throws Exception {
-		// DataFormat myJaxb = new JaxbDataFormat("com.rest.transformer.Order.xsd");
-		// from("cxfrs://http://localhost:9090?resourceClasses=com.rest.service.OrderService&bindingStyle=Default").beanRef("fulfillmentCenterOneProcessor",
-		// "transformToOrderRequestMessage").log("My HttpResponse = ${body}");
-		// .to("activemq:queue:JSON_MESSAGES_QUEUE");
-
-		from("cxfrs://http://localhost:9090?resourceClasses=com.rest.service.OrderService&bindingStyle=SimpleConsumer").marshal().xmljson()
-				.log("Body: ${body}");
+		from("cxfrs://http://localhost:9090?resourceClasses=com.rest.service.OrderService&bindingStyle=SimpleConsumer").log("BEFORE (XML) = ${body}")
+				.marshal("xmlToJson").log("BEFORE (JSON) = ${body}");
 	}
 }

@@ -132,11 +132,7 @@
         	<artifactId>camel-spring-javaconfig</artifactId>
         	<version>${camel-version}</version>
         </dependency>
-        <!-- <dependency>
-        	<groupId>org.apache.camel</groupId>
-        	<artifactId>camel-jaxb</artifactId>
-        	<version>${camel-version}</version>
-        </dependency> -->
+       
     </dependencies>
 
     <build>
